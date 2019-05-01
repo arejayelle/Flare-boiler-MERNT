@@ -13,23 +13,11 @@ export class Routes {
             })
         })
 
-        // Create a new contact
-        app.route('/contact')
-        .post(this.contactController.addNewContact);   
-        
-        // Contact 
-       
+        // Contact
         app.route('/contact')
         // GET endpoint
-        .get(this.contactController.getContacts)  
-
-        // POST endpoint
-        .post((req: Request, res: Response) => {   
-        // Create new contact         
-            res.status(200).send({
-                message: 'POST request successfulll!!!!'
-            })
-        })
+        .get(this.contactController.getContacts)
+        .post(this.contactController.addNewContact);   
 
         // Contact detail
         app.route('/contact/:contactId')
@@ -37,15 +25,5 @@ export class Routes {
         .get(this.contactController.getContactWithID)
         .put(this.contactController.updateContact)
         .delete(this.contactController.deleteContact)
-
-        
-
-        
-
-       
-
-
-
-        
     }
 }

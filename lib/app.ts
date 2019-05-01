@@ -7,7 +7,7 @@ class App {
 
     public app: express.Application;
     public routePrv: Routes = new Routes();
-    public mongoUrl: string = 'mongodb://localhost/CRMdb';  
+    public mongoUrl: string = 'mongodb://localhost/CRMdb';
 
     constructor() {
         this.app = express();
@@ -25,9 +25,8 @@ class App {
 
     private mongoSetup(): void{
         (<any> mongoose).Promise = global.Promise;
-        mongoose.connect(this.mongoUrl);    
+        mongoose.connect(this.mongoUrl);
     }
-
 }
 
 export default new App().app;
