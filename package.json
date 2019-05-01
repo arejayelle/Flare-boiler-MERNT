@@ -31,11 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arejayelle/Flare-boiler-MERNT.git"
+    "url": "git+https://github.com/arejayelle/Flare.git"
   },
   "bugs": {
-    "url": "https://github.com/arejayelle/Flare-boiler-MERNT/issues"
+    "url": "https://github.com/arejayelle/Flare/issues"
   },
-  "homepage": "https://github.com/arejayelle/Flare-boiler-MERNT#readme",
+  "homepage": "https://github.com/arejayelle/Flare#readme",
   "description": ""
 }
