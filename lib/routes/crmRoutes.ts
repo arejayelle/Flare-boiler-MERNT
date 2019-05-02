@@ -1,16 +1,15 @@
 import {Request, Response} from "express";
 import { ContactController } from "../controllers/crmController";
-
+import * as path from "path";
 export class Routes {   
     public contactController: ContactController = new ContactController();
  
     public routes(app : any): void {   
         
         app.route('/')
-        .get((req: Request, res: Response) => {            
-            res.status(200).send({
-                message: 'GET request successfulll!!!! base'
-            })
+        .get((req: Request, res: Response) => {
+            //Serve index of frontend          
+            res.sendFile(path.resolve(__dirname + "/../../index.html"));
         })
 
         // Contact
